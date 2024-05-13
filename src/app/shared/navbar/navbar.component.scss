@@ -1,0 +1,40 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+
+@mixin nav-setup {
+  @include grid-setup();
+  grid-template-columns: 1fr 4fr;
+  height: 64px;
+}
+@media screen and (min-width: 480px) {
+  @mixin nav-setup {
+    grid-template-columns: 1fr 2fr;
+  }
+  
+}
+
+nav {
+  @include nav-setup();
+  padding: 0px 30px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  align-items: center;
+
+  .logo {
+    img {
+      height: 32px;
+    }
+  }
+  ul {
+    @include grid-setup();
+    @include ul-setup();
+    grid-template-columns: repeat(6, 1fr);
+    text-align: center;
+    align-items: center;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

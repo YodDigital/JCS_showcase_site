@@ -1,0 +1,65 @@
+@mixin other-heading {
+    font-size: 16px;
+    font-weight: 400;
+    color: $white-color;
+  }
+  
+  @mixin grid-setup {
+    display: grid;
+    grid-gap: 8px;
+    padding: 0px 30px;
+  }
+  
+  @mixin ul-setup {
+    list-style-type: none;
+    padding-inline-start: 0px;
+    margin-block: 0px;
+  }
+
+  @mixin section-heading {
+    small {
+      font-family: "Lato", sans-serif;
+      color: $accent-color;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 4px;
+    }
+    h2 {
+      //   margin-top: 2px;
+      font-weight: 400;
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+  }
+
+  @mixin button-style{
+    // outline: none;
+      margin-top: 40px;
+      border: none;
+      padding: 8px;
+      background-color: $accent-color;
+      border-radius: 8px;
+      color: $white-color;
+  }
+
+  @mixin hide-scrollbar {
+    // -ms-overflow-style: none; /* IE and Edge */
+    // scrollbar-width: none; /* Firefox */
+    // scroll-margin: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: #eaeaea #d4d4d4;
+
+    &::-webkit-scrollbar{
+      height: 10px;
+		  width: 10px;     
+    }
+
+    &::-webkit-scrollbar-thumb{
+      background: #eaeaea;
+		  border: 1px solid #d4d4d4;
+    }
+		
+  }
+  
+  
+  

@@ -1,0 +1,76 @@
+<div class="container">
+  <header>
+    <h1>Discover JCS Group solutions</h1>
+    <p>
+      Reprehenderit commodo ut pariatur occaecat excepteur Lorem deserunt et
+      magna.
+    </p>
+    <button>
+      Learn more &nbsp; <img src="../assets/icons/longArrowRight_.svg" alt="" />
+    </button>
+  </header>
+  <section class="services">
+    <small>OUR SERVICES</small>
+    <h2>WHAT WE DO</h2>
+    <div class="service-container">
+      <div *ngFor="let service of services">
+        <app-service [serviceProp]="service"></app-service>
+      </div>
+    </div>
+    <a href="">Read more</a>
+  </section>
+  <section class="products">
+    <small>WORK SHOWCASE</small>
+    <h2>EXPLORE OUR PRODUCTS</h2>
+    <div class="carousel">
+      <a
+        class="carousel-item"
+        href="#{{ hrefs[i] }}!"
+        *ngFor="let item of items; let i = index"
+      >
+        <img src="{{ item }}" />
+      </a>
+    </div>
+  </section>
+
+  <section class="trending">
+    <small>WORK SHOWCASE</small>
+    <h2>EXPLORE OUR PRODUCTS</h2>
+    <div class="trending-container">
+      <div class="trending-item" *ngFor="let item of trending">
+        <app-trending [item]="item"></app-trending>
+      </div>
+    </div>
+    <a href=""
+      >More Products &nbsp;
+      <img src="../../../assets/icons/angleDoubleRight_.svg" alt=""
+    /></a>
+  </section>
+  <section class="partners">
+    <small>OUR PARTNERS</small>
+    <h2>THEY TRUST US</h2>
+    <div class="partner-container">
+      <div class="partner" *ngFor="let partner of partners">
+        <img [src]="partner.image" alt="" />
+      </div>
+    </div>
+  </section>
+  <section class="testimonials">
+    <small>TESTIMONIALS</small>
+    <h2>WHY SHOULD YOU CHOSE US</h2>
+    <div class="testimonials-container carousel">
+      <div class="testimonial carousel-item" *ngFor="let testimonial of testimonials">
+        <app-testimonial href="#" [testimonial]="testimonial"></app-testimonial>
+      </div>
+    </div>
+  </section>
+  <section class="team">
+    <small>THE LEADERSHIP</small>
+    <h2>MEET THE TEAM</h2>
+    <div class="team-container carousel carousel-slider" data-indicators="true">
+      <div class="team-member carousel-item" *ngFor="let member of team">
+        <app-team [member]="member"></app-team>
+      </div>
+    </div>
+  </section>
+</div>

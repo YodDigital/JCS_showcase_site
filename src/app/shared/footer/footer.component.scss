@@ -1,0 +1,78 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+.wrapper {
+    @include grid-setup();
+    grid-template-columns: repeat(3, 1fr) 1.5fr;
+    grid-auto-rows: 64px;
+    background-color: $dark-color-footer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+  
+    div {
+      // background-color: #ccc;
+      border: 1px solid black;
+      box-sizing: border-box;
+      padding: 8px;
+  
+      p {
+        @include other-heading();
+      }
+    }
+  
+    .logo {
+      grid-column-start: 1;
+      grid-row: 1/2;
+    }
+    .about {
+      grid-column-start: 1;
+      grid-row: 2/5;
+    }
+    .links {
+      grid-column-start: 2;
+      grid-row: 1/5;
+  
+      ul {
+        @include ul-setup();
+        li{
+          margin: 0px;
+          padding: 0px;
+        }
+        a {
+          text-decoration: none;
+          font-size: 6px;
+          color: #fff;
+          margin: 0px;
+          padding: 0px;
+        }
+        a:hover {
+          cursor: pointer;
+          text-decoration: underline;
+        }
+      }
+    }
+    .contact {
+      grid-column-start: 3;
+      grid-row: 1/5;
+      @include other-heading();
+    }
+    .newsletter {
+      grid-column: 4/5.5;
+      grid-row: 1/4;
+      @include other-heading();
+    }
+    .email {
+      grid-column: 4/5.5;
+      grid-row: 4/5;
+    }
+    .copyright {
+      grid-column: 1/4;
+      grid-row-start: 5;
+    }
+    .social {
+      grid-column: 4/5.5;
+      grid-row-start: 5;
+    }
+  }
+  

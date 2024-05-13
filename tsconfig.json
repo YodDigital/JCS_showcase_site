@@ -22,8 +22,13 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    // "types": [
+    //   "jquery", // Add
+    //   "materialize-css" // Add
+    // ]
   },
+  "include": ["src/**/*.ts", "node_modules/@types"],
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,

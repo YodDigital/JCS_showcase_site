@@ -1,0 +1,8 @@
+<div class="container">
+    <img [src]="item.image" alt="">
+    <div [ngClass]="!isHover? 'none' : 'hover'">
+        <div class="name">{{item.name}}</div>
+        <div class="description">{{item.description}}</div>
+        <button>Order now &nbsp;<img src="../../../assets/icons/longArrowRight_.svg" alt=""></button>
+    </div>
+</div>
