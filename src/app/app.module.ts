@@ -7,6 +7,7 @@ import { HomeComponent } from './Pages/home/home.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
 import {MatButtonModule} from '@angular/material/button';
 import { FooterComponent } from './shared/footer/footer.component';
 import { ServiceComponent } from './cards/service/service.component';
@@ -30,7 +31,8 @@ import { TeamComponent } from './cards/team/team.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatMenuModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,6 @@
 <nav>
     <div class="logo">
-      <a routerLink="home">
+      <a routerLink="">
         <img src="../assets/img/logo.png" alt="logo" />
       </a>
     </div>
@@ -11,17 +11,17 @@
   
     <ng-template #desktop_view>
       <ul>
-        <li><a routerLink="home">Home</a></li>
         <li>
-          <button mat-button [matMenuTriggerFor]="menu">
+          <!-- <button mat-button [matMenuTriggerFor]="menu">
             Menu
   
             <mat-menu #menu="matMenu" yPosition="below">
               <a mat-menu-item>Item 1</a>
               <a mat-menu-item>Item 2</a>
             </mat-menu>
-          </button>
+          </button> -->
         </li>
+        <li><a routerLink="">Home</a></li>
         <li><a href="/services">Services</a></li>
         <li><a href="/about">About</a></li>
         <li><a href="/company">Company</a></li>
@@ -30,17 +30,16 @@
     </ng-template>
   
     <ng-template #mobile_view>
-      <button mat-button [matMenuTriggerFor]="menu" class="menu-button">
-        Menu
-  
-        <mat-menu #menu="matMenu" yPosition="below">
-          <a mat-menu-item>Item 1</a>
-          <a mat-menu-item>Item 2</a>
-          <a mat-menu-item>Item 3</a>
-          <a mat-menu-item>Item 4</a>
-          <a mat-menu-item>Item 5</a>
-          <a mat-menu-item>Item 6</a>
-        </mat-menu>
+      <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
       </button>
+      <mat-menu #menu="matMenu" yPosition="below">
+        <a mat-menu-item>Item 1</a>
+        <a mat-menu-item>Item 2</a>
+        <a mat-menu-item>Item 3</a>
+        <a mat-menu-item>Item 4</a>
+        <a mat-menu-item>Item 5</a>
+        <a mat-menu-item>Item 6</a>
+      </mat-menu>
     </ng-template>
   </nav>
